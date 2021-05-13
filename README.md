@@ -14,6 +14,7 @@
 <hr>
 
 Deve ser capaz de: validar que uma pilha iniciada está vazia e que seu tamanho é 0. 
+</br>
 
 ```java
 
@@ -29,10 +30,10 @@ Deve ser capaz de: validar que uma pilha iniciada está vazia e que seu tamanho 
         assertTrue(p.estaVazia());
         assertEquals(0, p.tamanho());
     }
-
    ``` 
+
   Deve ser capaz de: empilhar um elemento, validar que a pilha não é mais vazia, validar que o tamanho da pilha é 1 e validar que a mensagem do elemento no topo é o mesmo do elemento adicionado
-  
+   </br>
 ```java
 
     @Test
@@ -41,10 +42,12 @@ Deve ser capaz de: validar que uma pilha iniciada está vazia e que seu tamanho 
         assertFalse(p.estaVazia());
         assertEquals(1, p.tamanho());
         assertEquals("primeiro", p.topo());
-    }
+    }   
  ```
-Deve ser capaz de: empilhar dois elementos e desempilhar um, validar que o tamanho da pilha agora é 2, validar que o topo da pilha agora é o segundo elemento empilhado, a seguir após desempilhar um elemento é preciso validar que o tamanho da pilha agora passa a ser 1, validar que agora o topo da pilha é o primeiro elemento e validar que o elemento desempilhado foi o segundo
+ 
 
+Deve ser capaz de: empilhar dois elementos e desempilhar um, validar que o tamanho da pilha agora é 2, validar que o topo da pilha agora é o segundo elemento empilhado, a seguir após desempilhar um elemento é preciso validar que o tamanho da pilha agora passa a ser 1, validar que agora o topo da pilha é o primeiro elemento e validar que o elemento desempilhado foi o segundo
+   </br> 
 
 ```java
 
@@ -59,11 +62,12 @@ Deve ser capaz de: empilhar dois elementos e desempilhar um, validar que o taman
         assertEquals(1, p.tamanho());
         assertEquals("primeiro", p.topo());
         assertEquals("segundo", desempilhado);
-    }
+    }   
  ```
  
+
  Deve ser capaz de: lancar uma exception do tipo `PilhaVaziaException` caso se tente remover um elemento de uma pilha que esteja vazia
- 
+   </br>
  ```java
 
     @Test(expected = PilhaVaziaException.class)
@@ -71,9 +75,9 @@ Deve ser capaz de: empilhar dois elementos e desempilhar um, validar que o taman
         p.desempilha();
     }
  ```
- 
-  Deve ser capaz de: lancar uma exception do tipo `PilhaCheiaException` caso se tente adicionar um elemento em uma pilha que já tenha chegado ao seu limite de elementos.
   
+  Deve ser capaz de: lancar uma exception do tipo `PilhaCheiaException` caso se tente adicionar um elemento em uma pilha que já tenha chegado ao seu limite de elementos.
+   </br>
    ```java
    @Test
     public void adicionaNaPilhaCheia() {
@@ -86,5 +90,5 @@ Deve ser capaz de: empilhar dois elementos e desempilhar um, validar que o taman
             fail();
 
         } catch (PilhaCheiaException e) {}
-    }
+    }    
  ```
