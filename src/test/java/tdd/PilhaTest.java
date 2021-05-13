@@ -43,6 +43,15 @@ public class PilhaTest {
         assertEquals("segundo", desempilhado);
     }
 
+    @Test(expected = PilhaVaziaException.class)
+    public void removeDaPilhaVazia(){
+        p.desempilha();
+    }
+
+
+
+
+
 
 
 

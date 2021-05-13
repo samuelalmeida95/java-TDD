@@ -27,6 +27,9 @@ public class Pilha {
     }
 
     public Object desempilha() {
+        if(estaVazia())
+            throw new PilhaVaziaException("Não é possivel desempilhar.");
+
         Object topo = topo();
         quantidade--;
         return topo;
