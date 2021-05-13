@@ -2,11 +2,15 @@ package tdd;
 
 public class Pilha {
 
-    private Object [] elementos = new Object [10];
+    private Object[] elementos;
     private int quantidade = 0;
 
+    public Pilha(int maximo) {
+        elementos = new Object[maximo];
+    }
+
     public boolean estaVazia() {
-        return (quantidade == 0); 
+        return (quantidade == 0);
     }
 
     public Object tamanho() {
@@ -15,7 +19,7 @@ public class Pilha {
 
     public void empilha(Object elemento) {
         this.elementos[quantidade] = elemento;
-        quantidade ++;
+        quantidade++;
     }
 
     public Object topo() {
@@ -24,7 +28,7 @@ public class Pilha {
 
     public Object desempilha() {
         Object topo = topo();
-        quantidade --;
+        quantidade--;
         return topo;
     }
 }
