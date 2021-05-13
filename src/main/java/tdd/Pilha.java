@@ -2,20 +2,23 @@ package tdd;
 
 public class Pilha {
 
+    private Object elemento;
+    private int quantidade;
+
     public boolean estaVazia() {
-        return true;
+        return (elemento == null); 
     }
 
     public Object tamanho() {
-        return 0;
+        return quantidade;
     }
 
-    public void empilha(String string) {
+    public void empilha(Object elemento) {
+        this.elemento = elemento;
+        quantidade ++;
     }
 
     public Object topo() {
-        return null;
+        return this.elemento;
     }
-    
-
 }
