@@ -3,6 +3,7 @@ package tdd;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +13,7 @@ public class PilhaTest {
     private Pilha p;
 
     @Before
-    public void inicializaPilha(){
+    public void inicializaPilha() {
         p = new Pilha(10);
     }
 
@@ -44,16 +45,21 @@ public class PilhaTest {
     }
 
     @Test(expected = PilhaVaziaException.class)
-    public void removeDaPilhaVazia(){
+    public void removeDaPilhaVazia() {
         p.desempilha();
     }
 
+    @Test
+    public void adicionaNaPilhaCheia() {
 
+        for (int i = 0; i < 10; i++) {
+            p.empilha("elemento" + i);
+        }
+        try {
+            p.empilha("BOOM");
+            fail();
 
+        } catch (PilhaCheiaException e) {}
+    }
 
-
-
-
-
-    
 }
