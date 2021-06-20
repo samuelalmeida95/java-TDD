@@ -6,12 +6,13 @@
     <img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"/>
 </div>
 
-<hr>
+##
+
 <div align="justfy"> 
  Olá! Atualmente decidi estudar sobre TDD (Test-Driven Development), e neste exercicio eu implementei alguns testes para verificar a funcionalidade de uma Pilha no Java, a seguir irei demonstrar os testes criados. 
 </div>
 
-<hr>
+##
 
 [✔] Deve ser capaz de: validar que uma pilha iniciada está vazia e que seu tamanho é 0. 
 </br>
